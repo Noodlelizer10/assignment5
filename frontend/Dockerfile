@@ -27,3 +27,7 @@ EXPOSE 80
 
 # Start nginx to serve the application
 CMD ["nginx", "-g", "daemon off;"]
+
+# Accept build argument 
+ARG VITE_API_URL 
+ENV VITE_API_URL=$VITE_API_URL
